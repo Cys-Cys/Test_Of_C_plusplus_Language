@@ -13,11 +13,11 @@ namespace SIMULATE{
         int processing_time;  // 处理时间
         int iterms = 0;  // 总共买了多少物品
       public:
-        Custom() {arriving_time = processing_time = 0};
+        Custom() {arriving_time = processing_time = 0;}
         ~Custom();
         void Setting(int n);
         int Get_Arr() const { return arriving_time;}
-        int Get_Pro() const { return Processing_time;}
+        int Get_Pro() const { return processing_time;}
     }shopping;
 
     class QUEUE_T{
@@ -40,8 +40,8 @@ namespace SIMULATE{
         bool Enter(const shopping &);
         bool Out(shopping &);
         int GetItermNum() const{ return iterms;}
-        bool isEmpty() const{return (iterms == 0) ? true : false};
-        bool isFull() const{return (iterms == numbers) ? true : false};
+        bool isEmpty() const{return (iterms == 0) ? true : false;}
+        bool isFull() const{return (iterms == numbers) ? true : false;}
     };
 
 }
